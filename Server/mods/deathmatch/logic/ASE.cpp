@@ -57,6 +57,7 @@ ASE::ASE ( CMainConfig* pMainConfig, CPlayerManager* pPlayerManager, unsigned sh
     std::stringstream ss;
     ss << usPort;
     m_strPort = ss.str();
+std::cout << "Port: " << m_strPort << " " << usPort << std::endl;
 
     m_strMtaAseVersion = MTA_DM_ASE_VERSION;
 }

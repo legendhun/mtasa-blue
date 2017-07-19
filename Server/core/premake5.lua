@@ -46,7 +46,7 @@ project "Core"
 	filter "system:linux"
 		links { "ncursesw", "breakpad", "rt" }
 		buildoptions { "-pthread" }
-		linkoptions { "-pthread" }
-
+		linkoptions { "-pthread", "-Wl,-E" }
+		buildoptions { "-fvisibility=default" }
 	filter "platforms:x64"
 		targetdir(buildpath("server/x64"))
